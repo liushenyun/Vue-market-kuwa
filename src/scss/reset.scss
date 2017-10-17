@@ -1,0 +1,253 @@
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    font-weight: normal;
+    font-family: "Microsoft Yahei";
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    &:hover {
+        outline: none;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+a,
+label,
+.pointer {
+    cursor: pointer
+}
+
+select,
+input,
+textarea {
+    outline: none
+}
+
+ul {
+    list-style: none;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+.flex {
+    display: flex;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+}
+
+.fi {
+    flex: 1
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wrap {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background-color: #F5F5F5;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+
+/*清除ie10+文本框的叉叉和密码输入框的眼睛图标*/
+
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
+
+
+/*ie滚动条样式*/
+
+textarea {
+    padding-top: 6px;
+    line-height: 1.2 !important;
+    scrollbar-face-color: #fff;
+    scrollbar-arrow-color: #fff;
+    scrollbar-shadow-color: #fff;
+    scrollbar-dark-shadow-color: #fff;
+    scrollbar-base-color: #fff;
+    scrollbar-track-color: #fff;
+}
+
+@import './px2rem.scss';
+#home,
+#Cart,
+#Person {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: px2rem(48);
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-con {
+    width: 100%;
+    height: 100%;
+    padding-top: px2rem(140);
+}
+
+textarea.dt-textarea {
+    padding: 10px 10px 10px 14px;
+    color: #333;
+    resize: none;
+    border: 1px solid #B4C6EB;
+    border-radius: 2px;
+}
+
+textarea.dt-textarea::-webkit-input-placeholder {
+    color: #9B9B9B;
+}
+
+textarea.dt-textarea::-moz-placeholder {
+    color: #9B9B9B;
+}
+
+textarea.dt-textarea::-ms-input-placeholder {
+    color: #9B9B9B;
+}
+
+// input 公共样式
+input.dt-input[type='text'],
+input.dt-input[type='password'] {
+    padding: 0 10px;
+    min-width: 90px;
+    width: 100%;
+    min-height: 30px;
+    height: 100%;
+    border-radius: 4px;
+    // background: #F9FBFF;
+    border: 1px solid #bfcbd9;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+}
+
+input.dt-input[type='text']::-webkit-input-placeholder,
+input.dt-input[type='password']::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #9B9B9B;
+}
+
+
+/*placeholder字体颜色*/
+
+input.dt-input[type='text']::-moz-placeholder,
+input.dt-input[type='password']::-moz-placeholder {
+    font-size: 14px;
+    color: #9B9B9B;
+}
+
+input.dt-input[type='text']::-ms-input-placeholder,
+input.dt-input[type='password']::-ms-input-placeholder {
+    font-size: 14px;
+    color: #9B9B9B;
+}

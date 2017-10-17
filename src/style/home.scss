@@ -1,0 +1,15 @@
+@import '../scss/px2rem';
+@import '../scss/mixin';
+#home {
+  @include font(px2rem(28), 2.1);
+  @include flexDir(column);
+  text-align: center;
+  .input {
+    &-text{
+      height:px2rem(100);
+      margin-top:px2rem(40);
+      background-color: transparent;
+      border: 1px solid #ddd;
+    }
+  }
+}
